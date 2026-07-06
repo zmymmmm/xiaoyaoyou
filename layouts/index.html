@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="post-list">
+  {{ range where .Site.RegularPages "Section" "posts" }}
+  <article class="post-item">
+    <a href="{{ .RelPermalink }}" class="post-link">
+      {{ $cover := .Resources.GetMatch "images/cover.*" }}
+      {{ if $cover }}
+      <div class="post-thumb">
+        <img src="{{ $cover.RelPermalink }}" alt="{{ .Title }}" loading="lazy">
+      </div>
+      {{ end }}
+      <div class="post-info">
+        <h2 class="post-title">{{ .Title }}</h2>
+        <p class="post-summary">{{ .Summary }}</p>
+        <time class="post-date">{{ .Date.Format "2006-01-02" }}</time>
+      </div>
+    </a>
+  </article>
+  {{ end }}
+</div>
+{{ end }}
