@@ -7,4 +7,9 @@
     </nav>
     <button class="menu-toggle" aria-label="菜单">☰</button>
   </div>
+  <script>
+  document.querySelector(".menu-toggle").addEventListener("click", function() {
+    document.querySelector(".site-nav").classList.toggle("active");
+  });
+  </script>
 </header>
