@@ -165,6 +165,29 @@ main {
   transform: scale(1.02);
 }
 
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+.post-content th,
+.post-content td {
+  border: 1px solid #e5e5e5;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.post-content th {
+  background: #f5f5f7;
+  font-weight: 600;
+}
+
+.post-content tr:hover {
+  background: #fafafa;
+}
+
 .post-nav {
   display: flex;
   justify-content: space-between;
