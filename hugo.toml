@@ -1,0 +1,15 @@
+baseURL = ""
+languageCode = "zh-cn"
+title = "逍遥游"
+
+[params]
+  description = "个人 AI 产品使用心得"
+  author = "逍遥游"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML"]
